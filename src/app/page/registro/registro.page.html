@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>TellevoAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div id="container">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Registro</ion-card-title>
+    </ion-card-header>
+
+    <form>
+      <ion-item>
+        <ion-label position="stacked">Nombre: </ion-label>
+        <ion-input  type="text" name="nombre" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Apellido: </ion-label>
+        <ion-input  type="text" name="apellido" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Email: </ion-label>
+        <ion-input  type="Email" name="apellido" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Nro Telefónico: </ion-label>
+        <ion-input  type="text" name="telefono" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-radio-group>
+          <ion-item>
+            <ion-label>Pasajero</ion-label>
+            <ion-radio value="cord"></ion-radio>
+         
+            <ion-label>Conductor</ion-label>
+            <ion-radio value="duesenberg"></ion-radio>
+          </ion-item>
+    
+        </ion-radio-group>
+      </ion-item>
+      
+      <br>
+      <ion-button expand="full" [routerLink]="['/home']" shape="round">Ingresar</ion-button>
+    </form>
+
+  </ion-card>
+</div>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title> ©  Copyright tellevoAPP</ion-title>
+  </ion-toolbar>
+</ion-footer>
+
