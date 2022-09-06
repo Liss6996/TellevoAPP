@@ -14,7 +14,11 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./page/login/login.module').then( m => m.LoginPageModule)
+  },  {
+    path: 'formulario-registro',
+    loadChildren: () => import('./page/formulario-registro/formulario-registro.module').then( m => m.FormularioRegistroPageModule)
   },
+
 
 ];
 
