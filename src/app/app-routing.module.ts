@@ -20,9 +20,18 @@ const routes: Routes = [
     loadChildren: () => import('./page/formulario-registro/formulario-registro.module').then( m => m.FormularioRegistroPageModule)
   },
   {
+    path: 'pasajero',
+    loadChildren: () => import('./page/pasajero/pasajero.module').then( m => m.PasajeroPageModule)
+  },
+  {
+    path: 'conductor',
+    loadChildren: () => import('./page/conductor/conductor.module').then( m => m.ConductorPageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./page/error/error.module').then( m => m.ErrorPageModule)
   },
+
 
 
 ];
