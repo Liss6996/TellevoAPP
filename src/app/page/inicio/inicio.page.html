@@ -1,25 +1,22 @@
-<ion-header>
-  <ion-toolbar color="success">
-    <ion-title>TellevoAPP</ion-title>
-  </ion-toolbar>
-</ion-header>
+
+  <app-latoolbar></app-latoolbar>
+
 
 
 <ion-content>
-  <div id="container">
+  <div class="contenedor">
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Cómo deseas ingresar ?</ion-card-title>
+      <ion-card-title class="titulo">Cómo deseas ingresar ?</ion-card-title>
     </ion-card-header>
 
     <form>
+    <div class="botones">
+      <ion-button class="boton-pasajero" shape="round" color="primary">Pasajero</ion-button>
+      <br>
       
-      <ion-button expand="full" [routerLink]="['/home']" shape="round">Conductor</ion-button>
-      
-      
-
-      
-      <ion-button expand="full" [routerLink]="['/home']" shape="round">Pasajero</ion-button>
+      <ion-button class="boton-conductor" shape="round"color="secondary">Conductor</ion-button>
+    </div>
     </form>
 
   </ion-card>
@@ -27,8 +24,4 @@
 </ion-content>
 
 
-<ion-footer>
-  <ion-toolbar>
-    <ion-title> ©  Copyright tellevoAPP</ion-title>
-  </ion-toolbar>
-</ion-footer>
+<app-footer></app-footer>

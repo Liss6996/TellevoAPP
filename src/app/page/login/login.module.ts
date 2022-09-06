@@ -17,7 +17,7 @@ import { BaseModule } from 'src/app/component/base.module';
     FormsModule,
     IonicModule,
     LoginPageRoutingModule,
-    BaseModule
+    BaseModule,
   ],
   declarations: [LoginPage,LoginComponent,],
 })
