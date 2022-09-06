@@ -26,6 +26,16 @@
     text-decoration: none;
   }
   
-  ion-header {
-    background-color: #aaff9c;
-  }
+.contenedor-contrasenia { 
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.contenedor-registro {
+  display: flex;
+  justify-content: center;
+}
+
+.boton {
+  margin-top:20px;
+}

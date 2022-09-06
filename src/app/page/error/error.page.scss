@@ -1,0 +1,29 @@
+.contenedor-texto {
+    text-align: center;
+    margin: 150px 0px 30px 0px;
+}
+
+.contenedor-texto {
+
+}
+
+.contenedor-texto .texto {
+    font-family: 'Segoe UI';
+    font-size: 30px;
+}
+
+.contenedor-boton {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+}
+
+.contenedor-boton .btn-inicio {
+    height: 50px;
+    width: 100px;
+}
+
+.contenedor-boton .btn-icono {
+    height: 40px;
+    width: 40px;
+}
