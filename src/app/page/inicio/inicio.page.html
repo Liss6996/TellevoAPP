@@ -1,25 +1,24 @@
 
   <app-latoolbar></app-latoolbar>
 
-
-
 <ion-content>
   <div class="contenedor">
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title class="titulo">Cómo deseas ingresar ?</ion-card-title>
-    </ion-card-header>
+
+    <div class="logo"> 
+      <img class= "imagen-logo"src="./assets/imgs/logo.jpg" style="width: 15vh; height: 15vh "/>
+    </div>
+    <div class="titulo">¿Cómo deseas ingresar? </div>
+
 
     <form>
     <div class="botones">
-      <ion-button class="boton-pasajero" shape="round" color="primary">Pasajero</ion-button>
-      <br>
+      <ion-button class="boton-pasajero" shape="round" color="primary" [routerLink]="['./login']">Pasajero</ion-button>
       
       <ion-button class="boton-conductor" shape="round"color="secondary">Conductor</ion-button>
     </div>
     </form>
 
-  </ion-card>
+
 </div>
 </ion-content>
 

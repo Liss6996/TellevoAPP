@@ -30,7 +30,11 @@ const routes: Routes = [
   {
     path: '**',
     loadChildren: () => import('./page/error/error.module').then( m => m.ErrorPageModule)
+  },  {
+    path: 'recuperar-contrasenia',
+    loadChildren: () => import('./page/recuperar-contrasenia/recuperar-contrasenia.module').then( m => m.RecuperarContraseniaPageModule)
   },
+
 
 
 
