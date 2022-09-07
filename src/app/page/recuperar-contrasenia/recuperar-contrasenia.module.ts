@@ -7,13 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { RecuperarContraseniaPageRoutingModule } from './recuperar-contrasenia-routing.module';
 
 import { RecuperarContraseniaPage } from './recuperar-contrasenia.page';
+import { BaseModule } from 'src/app/component/base.module';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RecuperarContraseniaPageRoutingModule
+    RecuperarContraseniaPageRoutingModule,
+    BaseModule
+
   ],
   declarations: [RecuperarContraseniaPage]
 })

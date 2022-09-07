@@ -8,7 +8,7 @@ import { InicioPageRoutingModule } from './inicio-routing.module';
 
 import { InicioPage } from './inicio.page';
 import { BaseModule } from 'src/app/component/base.module';
-
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
   imports: [
@@ -17,6 +17,7 @@ import { BaseModule } from 'src/app/component/base.module';
     IonicModule,
     InicioPageRoutingModule,
     BaseModule,
+    MatProgressBarModule
   ],
   declarations: [InicioPage]
 })
