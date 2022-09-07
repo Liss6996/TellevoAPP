@@ -30,14 +30,14 @@
               <div *ngIf="contrasenia.errors.maxLength">El maximo es de 20 caracteres</div>
             </div>
 
-            <ion-button type="submit" class="btn btn-primary" expand="full" [disabled]="!loginform.valid">Ingresar</ion-button>
+            <ion-button type="submit" class="btn btn-primary" expand="full" [disabled]="!loginform.valid" [routerLink]="['/conductor']">Ingresar</ion-button>
           </form>
 
       <div class="contenedor-contrasenia">
-        <a class= "link-contrasenia" href="http://"> Olvidé mi contraseña </a> 
+        <a class= "link-contrasenia" [routerLink]="['/recuperar-contrasenia']"> Olvidé mi contraseña </a> 
       </div>
       <div class="contenedor-registro">
-        <a class="link-registro" [routerLink]="['/inicio']">Crea tu cuenta gratis</a>
+        <a class="link-registro" [routerLink]="['/formulario-registro']">Crea tu cuenta gratis</a>
       </div>
     
 
