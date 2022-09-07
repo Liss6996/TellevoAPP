@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms"
+import { Router } from '@angular/router';
+import { LocalstorageService } from 'src/app/services/data/localstorage.service';
 
 
 @Component({
@@ -12,7 +14,9 @@ export class LoginComponent implements OnInit {
   loginform:FormGroup;
 
   constructor(
-    private formbuilder: FormBuilder
+    private formbuilder: FormBuilder,
+    private localstorage:LocalstorageService,
+    private router:Router
   ) {
     this.loginform = this.formbuilder.group({ 
       nombreUsuario : new FormControl("",Validators.compose([
@@ -38,6 +42,7 @@ export class LoginComponent implements OnInit {
 
   datos(credenciales){
     console.log(credenciales);
+    this.router.navigate(['/conductor/',credenciales.nombreUsuario])
   } 
 
 }
