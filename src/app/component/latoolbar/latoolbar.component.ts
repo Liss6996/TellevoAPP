@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-latoolbar',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./latoolbar.component.scss'],
 })
 export class LatoolbarComponent implements OnInit {
+
+  @Input() titulo : string;
 
   constructor() { }
 
