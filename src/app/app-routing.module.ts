@@ -20,11 +20,11 @@ const routes: Routes = [
     loadChildren: () => import('./page/formulario-registro/formulario-registro.module').then( m => m.FormularioRegistroPageModule)
   },
   {
-    path: 'pasajero',
+    path: 'pasajero/:pasajero',
     loadChildren: () => import('./page/pasajero/pasajero.module').then( m => m.PasajeroPageModule)
   },
   {
-    path: 'conductor',
+    path: 'conductor/:conductor',
     loadChildren: () => import('./page/conductor/conductor.module').then( m => m.ConductorPageModule)
   },
   {
