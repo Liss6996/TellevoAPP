@@ -10,20 +10,20 @@
     margin-top: 20px;
 }
 
-.botones .boton-pasajero {
-    margin-right: 30px;
-    width: 200px;
-    height: 50px;   
-}
-
-.botones .boton-conductor {
-    margin-right: 30px;
-    width: 200px;
-    height: 50px;   
-}
 
 .titulo {
+    margin-top:20px;
     font-size: 27px;
     font-weight: bold;
     font-family: 'Lucida Sans';
 }
+
+.logo {
+    display:block;
+  
+  }
+  
+  .logo .imagen-logo {
+    justify-content: center;
+  
+  }
