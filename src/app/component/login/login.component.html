@@ -1,43 +1,38 @@
 
 <ion-content>
-  <div id="container">
+  <div class="container">
     <ion-card>
       <img src="./assets/imgs/tellevoapp.jpg" style="width: 15vh; height: 15vh "/>
       <ion-card-content>
         <ion-card-title>
           Ingresar
           </ion-card-title>
-        
-          <ion-list>
 
+          <form class="formulario-login" >
             <ion-item>
               <ion-label position="stacked">Usuario</ion-label>
-              <ion-input type="text"  name="usuario" >
-              </ion-input>
-    
+              <ion-input></ion-input>
             </ion-item>
-            <ion-list>
-              <ion-item>
-                <ion-label position="stacked">Password</ion-label>
-                <ion-input type="password"  name="password" ></ion-input>
-              </ion-item>
-            </ion-list>
-      
-            <ion-button class="boton" expand="full" [routerLink]="['/registro']" shape="round">Ingresar</ion-button>
-          </ion-list>
+
+            <ion-item>
+              <ion-label position="stacked">Contraseña</ion-label>
+              <ion-input type="password"> </ion-input>
+
+            </ion-item >
+            <ion-button class ="boton" expand="full">Ingresar</ion-button>
+          </form>
 
       <div class="contenedor-contrasenia">
         <a class= "link-contrasenia" href="http://"> Olvidé mi contraseña </a> 
       </div>
       <div class="contenedor-registro">
-        <a class="link-registro" href="http://"> Crear tu cuenta gratis </a>
+        <a class="link-registro" href="" >Crea tu cuenta gratis</a>
       </div>
-
+      
       </ion-card-content>
     </ion-card>
 
   </div>
-
-
 </ion-content>
+
 
