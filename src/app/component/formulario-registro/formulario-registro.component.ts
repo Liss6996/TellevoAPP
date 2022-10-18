@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms"
+import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms";
 import { Router } from '@angular/router';
 import { LocalstorageService } from 'src/app/services/data/localstorage.service';
 
@@ -11,14 +11,16 @@ import { LocalstorageService } from 'src/app/services/data/localstorage.service'
 })
 export class FormularioRegistroComponent implements OnInit {
 
-  registroform:FormGroup;
+  registroForm: FormGroup;
+
 
   constructor(
     private formbuilder: FormBuilder,
     private localstorage:LocalstorageService,
     private router:Router
+
   ) { 
-    this.registroform= this.formbuilder.group({
+    this.registroForm= this.formbuilder.group({
       nombreUsuario: new FormControl("", Validators.compose([
         Validators.required,
         Validators.minLength(3)
@@ -55,13 +57,13 @@ export class FormularioRegistroComponent implements OnInit {
   });
   }
 
-  get nombreUsuario() { return this.registroform.get('nombreUsuario');}
-  get apellidoUsuario() { return this.registroform.get('apellidoUsuario');}
-  get rutUsuario() { return this.registroform.get('rutUsuario');}
-  get emailUsuario() { return this.registroform.get('emailUsuario');}
-  get telefonoUsuario() { return this.registroform.get('telefonoUsuario');}
-  get fecnacUsuario() { return this.registroform.get('fecnacUsuario');}
-  get patenteUsuario() { return this.registroform.get('patenteUsuario');}
+  get nombreUsuario() { return this.registroForm.get('nombreUsuario');}
+  get apellidoUsuario() { return this.registroForm.get('apellidoUsuario');}
+  get rutUsuario() { return this.registroForm.get('rutUsuario');}
+  get emailUsuario() { return this.registroForm.get('emailUsuario');}
+  get telefonoUsuario() { return this.registroForm.get('telefonoUsuario');}
+  get fecnacUsuario() { return this.registroForm.get('fecnacUsuario');}
+  get patenteUsuario() { return this.registroForm.get('patenteUsuario');}
 
 
   ngOnInit() {}
