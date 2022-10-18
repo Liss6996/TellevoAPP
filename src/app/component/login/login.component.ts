@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
         contrasenia : new FormControl("",Validators.compose([
           Validators.required,
           Validators.maxLength(20),
-          Validators.minLength(7),
+          Validators.minLength(7)
 
         ]))
 
