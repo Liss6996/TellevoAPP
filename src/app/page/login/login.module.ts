@@ -18,8 +18,8 @@ import { BaseModule } from 'src/app/component/base.module';
     LoginPageRoutingModule,
     BaseModule,
     ReactiveFormsModule,
-    FormsModule,
+    FormsModule
   ],
-  declarations: [LoginPage,LoginComponent,],
+  declarations: [LoginPage,LoginComponent],
 })
 export class LoginPageModule {}

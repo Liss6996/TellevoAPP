@@ -3,45 +3,45 @@
   <div class="container">
     <div class="titulo">Registrate </div>
 
-    <form class="formulario-Registro" method="POST" [formGroup]="registroForm" (ngsubmit)="datos(registroform.value)">
+    <form class="formulario-Registro" method="POST" [formGroup]="registroForm" (ngsubmit)="datos(registroForm.value)">
 
       <ion-item>        
-        <ion-label position="stacked">Nombre: </ion-label>
-        <ion-input type="text" name="nombre" required formControlName="nombreUsuario"></ion-input>
+        <ion-label class="texto" position="stacked">Nombre: </ion-label>
+        <ion-input type="text" required formControlName="nombreUsuario"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="stacked">Apellido: </ion-label>
-        <ion-input  type="text" name="apellido" required formControlName="apellidoUsuario"></ion-input>
+        <ion-label class="texto" position="stacked">Apellido: </ion-label>
+        <ion-input  type="text" required formControlName="apellidoUsuario"></ion-input>
       </ion-item>
     
       <ion-item>        
-        <ion-label position="stacked">Rut: </ion-label>
-        <ion-input  type="text" name="Rut" required formControlName="rutUsuario"></ion-input>   
+        <ion-label class="texto" position="stacked">Rut: </ion-label>
+        <ion-input  type="text" required formControlName="rutUsuario"></ion-input>   
       </ion-item>
 
       <ion-item>
-        <ion-label position="stacked">Email: </ion-label>
-        <ion-input  type="text" name="email" required formControlName="emailUsuario"></ion-input>
+        <ion-label class="texto" position="stacked">Email: </ion-label>
+        <ion-input  type="text" required formControlName="emailUsuario"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="stacked">Nro Telefónico: </ion-label>
-        <ion-input  type="number" name="telefono" required formControlName="telefonoUsuario"></ion-input>
+        <ion-label class="texto" position="stacked">Nro Telefónico: </ion-label>
+        <ion-input  type="number" required formControlName="telefonoUsuario"></ion-input>
       </ion-item>
 
       <ion-item>
-          <ion-label position="stacked">Fecha Nacimiento: </ion-label>
-          <ion-input  type="date" name="fechaNacimiento" required formControlName="fecnacUsuario"></ion-input>
+          <ion-label class="texto" position="stacked">Fecha Nacimiento: </ion-label>
+          <ion-input  type="date" required formControlName="fecnacUsuario"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="stacked">Patente: </ion-label>
-        <ion-input  type="text" name="patente" required formControlName="patenteUsuario"></ion-input>
+        <ion-label class="texto" position="stacked">Patente: </ion-label>
+        <ion-input  type="text" required formControlName="patenteUsuario"></ion-input>
       </ion-item>
 
       <br>
-      <ion-button type="submit" expand="full" shape="round" [disabled]="!registroform.valid" [routerLink]="['/registrar']">Ingresar</ion-button>
+      <ion-button type="submit" expand="full" shape="round" [disabled]="!registroForm.valid" [routerLink]="['/registrar']">Ingresar</ion-button>
     </form>
 
   </div>

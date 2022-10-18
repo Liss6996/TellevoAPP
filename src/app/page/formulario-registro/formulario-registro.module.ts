@@ -20,7 +20,7 @@ import { BaseModule } from 'src/app/component/base.module';
     FormularioRegistroPageRoutingModule,
     BaseModule,
     ReactiveFormsModule,
-    FormsModule,
+    FormsModule
   ],
   declarations: [FormularioRegistroPage,FormularioRegistroComponent]
 })

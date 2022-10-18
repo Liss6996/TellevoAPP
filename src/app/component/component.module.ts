@@ -11,7 +11,7 @@ import { IonicModule } from '@ionic/angular';
   declarations: [LoginComponent,FormularioRegistroComponent],
   imports: [
     CommonModule,
-    IonicModule,
+    IonicModule
 
   ],
   exports: [LoginComponent,FormularioRegistroComponent],
