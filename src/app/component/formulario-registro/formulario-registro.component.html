@@ -3,7 +3,7 @@
   <div class="container">
     <div class="titulo">Registrate </div>
 
-    <form class="formulario-Registro" method="POST" [formGroup]="registroForm" (ngsubmit)="datos(registroForm.value)">
+    <form class="formulario-Registro" method="POST" [formGroup]="registroForm" (ngSubmit)="datos(registroForm.value)">
 
       <ion-item>        
         <ion-label class="texto" position="stacked">Nombre: </ion-label>
@@ -32,7 +32,7 @@
 
       <ion-item>
           <ion-label class="texto" position="stacked">Fecha Nacimiento: </ion-label>
-          <ion-input  type="date" required formControlName="fecnacUsuario"></ion-input>
+          <ion-input  type="Date" required formControlName="fecnacUsuario"></ion-input>
       </ion-item>
 
       <ion-item>
@@ -40,8 +40,18 @@
         <ion-input  type="text" required formControlName="patenteUsuario"></ion-input>
       </ion-item>
 
+      <ion-item>
+        <ion-label class="texto" position="stacked">Contraseña: </ion-label>
+        <ion-input  type="password" required formControlName="contraseniaUsuario"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="texto" position="stacked">Confirmar Contraseña: </ion-label>
+        <ion-input  type="password" required formControlName="confirmarContrasenia"></ion-input>
+      </ion-item>
+
       <br>
-      <ion-button type="submit" expand="full" shape="round" [disabled]="!registroForm.valid" [routerLink]="['/registrar']">Ingresar</ion-button>
+      <ion-button expand="full" shape="round"  (click)="guardar()">Registrar Usuario</ion-button>
     </form>
 
   </div>
