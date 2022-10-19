@@ -5,9 +5,9 @@
       </div>
       <div class="titulo">ingresar </div>
 
-          <form class="formulario-login" method="POST" [formGroup]="loginform" (ngSubmit)="datos(loginform.value)">
+          <form class="formulario-login" method="POST" [formGroup]="loginForm" >
             <ion-item>
-              <ion-label position="stacked">Usuario</ion-label>
+              <ion-label position="floating">Usuario</ion-label>
               <ion-input maxLength="15" minlength="8" required formControlName="nombreUsuario"></ion-input>
             </ion-item>
 
@@ -18,7 +18,7 @@
             </div>
 
             <ion-item>
-              <ion-label position="stacked">Contraseña</ion-label>
+              <ion-label position="floating">Contraseña</ion-label>
               <ion-input maxLength="20" minlength="7" required type="password" formControlName="contrasenia"> </ion-input>
             </ion-item >
 
@@ -28,7 +28,7 @@
               <div *ngIf="contrasenia.errors.maxLength">El maximo es de 20 caracteres</div>
             </div>
 
-            <ion-button type="submit" class="btn btn-primary" expand="full" [disabled]="!loginform.valid" [routerLink]="['/conductor']">Ingresar</ion-button>
+            <ion-button (click)="ingresar()" class="btn btn-primary" expand="full" [disabled]="!loginForm.valid">Ingresar</ion-button>
           </form>
 
       <div class="contenedor-contrasenia">
@@ -37,9 +37,5 @@
       <div class="contenedor-registro">
         <a class="link-registro" [routerLink]="['/formulario-registro']">Crea tu cuenta gratis</a>
       </div>
-    
-
   </div>
 </ion-content>
-
-
