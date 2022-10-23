@@ -17,7 +17,7 @@ export class NoIngresadoGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       if(localStorage.getItem('ingresado')){   //si en el local storage esta el item ingresado retorna un false y podemos ingresar
         return false;
-        this.navController.navigateRoot('conductor/:conductor');
+        this.navController.navigateRoot('login');
       }else{
         return true;
       }
