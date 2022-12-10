@@ -1,33 +1,40 @@
 <app-latoolbar titulo="Conductor"></app-latoolbar>
 
 <ion-content>
-    <ion-card>
+  <ion-buttons>
+    <ion-back-button defaultHref="/"></ion-back-button>
+  </ion-buttons>
+  <ion-card>
     <ion-item>
-        <ion-label>Nombre: {{ nombreUsuario }}</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>
-          Rut: 18326726-4
-        </ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>
-            <ion-input>Cantidad Pasajeros</ion-input>
-        </ion-label>
-      </ion-item>
-      <ion-item>
-        <div class="logo"> 
-        <ion-label>Direccion</ion-label>
-      
-        <img class= "imagen-logo"src="./assets/imgs/mapa.jpg" style="width: 15vh; height: 15vh "/>
-      </div>
+      <ion-label>Usuario: {{ nombreUsuario }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-input>Cantidad Pasajeros: </ion-input>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-input>Precio: </ion-input>
+      </ion-label>
     </ion-item>
     <ion-item>
       <div class="botones">
-        <ion-button class="boton-pasajero" shape="round" color="primary" >Buscar</ion-button>     
+        <ion-button (click)="getPosition()">Obtener Dirección</ion-button>
       </div>
     </ion-item>
-</ion-card>
+  </ion-card>
+  <div class="container">
+    <capacitor-google-map #map></capacitor-google-map>
+    <ion-item>
+      <div class="botones">
+
+        <ion-button>Buscar Viaje</ion-button>
+
+      </div>
+    </ion-item>
+  </div>
+
 </ion-content>
 
 <app-footer></app-footer>

@@ -9,6 +9,8 @@ import { ConductorPageRoutingModule } from './conductor-routing.module';
 import { ConductorPage } from './conductor.page';
 import { BaseModule } from 'src/app/component/base.module';
 
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -17,6 +19,7 @@ import { BaseModule } from 'src/app/component/base.module';
     ConductorPageRoutingModule,
     BaseModule,
   ],
-  declarations: [ConductorPage]
+  declarations: [ConductorPage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class ConductorPageModule {}
+export class ConductorPageModule { }

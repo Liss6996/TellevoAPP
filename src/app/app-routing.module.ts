@@ -46,7 +46,11 @@ const routes: Routes = [
   {
     path: '**',
     loadChildren: () => import('./page/error/error.module').then( m => m.ErrorPageModule)
+  },  {
+    path: 'modal',
+    loadChildren: () => import('./modal/modal.module').then( m => m.ModalPageModule)
   },
+
 
 
 

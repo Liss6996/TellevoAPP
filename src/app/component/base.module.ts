@@ -7,11 +7,11 @@ import { LatoolbarComponent } from './latoolbar/latoolbar.component';
 
 
 @NgModule({
-  declarations: [FooterComponent,LatoolbarComponent],
+  declarations: [FooterComponent, LatoolbarComponent],
   imports: [
     CommonModule,
     IonicModule
   ],
-  exports: [FooterComponent,LatoolbarComponent]
+  exports: [FooterComponent, LatoolbarComponent]
 })
 export class BaseModule { }
