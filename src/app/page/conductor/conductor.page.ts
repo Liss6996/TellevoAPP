@@ -4,7 +4,8 @@ import { GoogleMap, Marker } from '@capacitor/google-maps';
 import { environment } from 'src/environments/environment';
 import { Geolocation, PositionOptions } from '@capacitor/geolocation';
 import { LocalstorageService } from 'src/app/services/data/localstorage.service';
-
+import { Registro } from 'src/app/models/interfaces';
+import { FirestoreService } from 'src/app/services/basededatos.service';
 declare let google;
 
 @Component({
@@ -18,6 +19,12 @@ export class ConductorPage implements OnInit {
 
   nombreUsuario: string;
 
+  nuevoRegistro: Registro = {
+    correo: '',
+    cantidadPersonas: '',
+    precio: '',
+  };
+
   location: any = {};
   keys: string[] = [];
   lat: any;
@@ -25,7 +32,8 @@ export class ConductorPage implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private localStorage: LocalstorageService
+    private localStorage: LocalstorageService,
+    public database: FirestoreService,
   ) { }
 
   ionOnInit() {
@@ -33,7 +41,8 @@ export class ConductorPage implements OnInit {
   }
 
   ngOnInit() {
-    // this.nombreUsuario = JSON.parse(this.localStorage.get('nombre'));
+    this.nombreUsuario = this.activatedRoute.snapshot.paramMap.get('nombre');
+    // this.nombreUsuario = this.localStorage.get('usuario');
   }
 
   async getPosition() {
@@ -91,6 +100,10 @@ export class ConductorPage implements OnInit {
       console.log(marker);
     });
   }
-
+  guardar() {
+    const data = this.nuevoRegistro;
+    const enlace = 'Registro';
+    this.database.createDoc(data, enlace);
+  }
 
 }

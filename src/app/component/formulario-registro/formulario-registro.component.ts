@@ -3,7 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms"
 import { Router } from '@angular/router';
 import { AlertController, NavController } from '@ionic/angular';
 import { LocalstorageService } from 'src/app/services/data/localstorage.service';
-
+import { Registro } from 'src/app/models/interfaces';
 
 @Component({
   selector: 'app-formulario-registro-comp',
@@ -13,7 +13,6 @@ import { LocalstorageService } from 'src/app/services/data/localstorage.service'
 export class FormularioRegistroComponent implements OnInit {
 
   registroForm: FormGroup;
-
 
   constructor(
     private formbuilder: FormBuilder,

@@ -10,12 +10,12 @@
     </ion-item>
     <ion-item>
       <ion-label>
-        <ion-input>Cantidad Pasajeros: </ion-input>
+        <ion-input [(ngModel)]="nuevoRegistro.cantidadPersonas">Cantidad Pasajeros: </ion-input>
       </ion-label>
     </ion-item>
     <ion-item>
       <ion-label>
-        <ion-input>Precio: </ion-input>
+        <ion-input [(ngModel)]="nuevoRegistro.precio">Precio: </ion-input>
       </ion-label>
     </ion-item>
     <ion-item>
@@ -29,7 +29,7 @@
     <ion-item>
       <div class="botones">
 
-        <ion-button>Buscar Viaje</ion-button>
+        <ion-button (click)="guardar()">Buscar Viaje</ion-button>
 
       </div>
     </ion-item>
