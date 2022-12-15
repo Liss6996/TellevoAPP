@@ -17,7 +17,6 @@ export class InicioPage implements OnInit {
 
   ) { }
 
-  
 
   ngOnInit() {}
 
@@ -25,14 +24,17 @@ export class InicioPage implements OnInit {
 
     if(localStorage.getItem('ingresado' )){   //si en el local storage esta el item ingresado entramos como conductor  
       this.navController.navigateRoot('conductor/:conductor');
+    } else {
+    this.navController.navigateRoot('login');
 }
 }
 
-async ingresarPasajero(){   //variable para boton pasajero
 
-  if(localStorage.getItem('ingresado' )){   //si en el local storage esta el item ingresado entramos como pasajero   
-    this.navController.navigateRoot('pasajero/:pasajero');
-}
-}
+// async ingresarPasajero(){   //variable para boton pasajero
+
+//   if(localStorage.getItem('ingresado' )){   //si en el local storage esta el item ingresado entramos como pasajero   
+//     this.navController.navigateRoot('pasajero/:pasajero');
+// }
+// }
 // si queremos salir de la navegacion desde el storage localStorage.removeItem('ingresado')
 }

@@ -3,16 +3,16 @@
 <ion-content>
   <div class="contenedor">
     <div class="logo">
-      <img class="imagen-logo" src="./assets/imgs/logo.png" style="width: 15vh; height: 15vh " />
+      <img class="imagen-logo" src="./assets/imgs/tellevoapp.png" style="width: 50vh; height: 40vh " />
     </div>
-    <div class="titulo">Bienvenidos </div>
+    <div class="titulo" style="alt: 50px;">Bienvenidos </div>
 
 
     <form>
-      <div class="botones">
-        <ion-button (click)="ingresarConductor()" class="boton-conductor" shape="round" color="secondary"
-          [routerLink]="['/login']">Ingresar</ion-button>
-      </div>
+        <div class="botones">
+          <ion-button (click)="ingresarConductor()" class="boton-conductor" shape="round" color="secondary"
+            [routerLink]="['/login']">Ingresar</ion-button>
+        </div>
     </form>
     <mat-progress-bar mode="indeterminate"></mat-progress-bar>
   </div>
